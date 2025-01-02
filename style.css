@@ -1,0 +1,94 @@
+@font-face {
+    font-family: 'Ownglyph_meetme-Rg';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2402_1@1.0/Ownglyph_meetme-Rg.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Ownglyph_meetme-Rg', sans-serif;
+    background-color: #213555;
+    font-size: 25px;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: calc(100vw - 80px);
+    height: calc(100vh - 80px);
+    background-color: #F5EFE7;
+    position :absolute;
+    top : 50%;
+    left: 50%;
+    transform: translate(-50% ,-50%);
+    display: flex;
+    border-radius: 10px;
+}
+/* 부모 컨테이너 바디 기준으로 정렬렬 
+border-radis ) 모서리 둥글게 표시
+-widht, height 꼭 calc 양쪽 숫자 - 에 띄어쓰기  */
+
+/* left container */
+.left_container {
+    width : 35%;
+    padding :30px;
+    display : flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+/* display flex 한 뒤 direction 설정정 */
+.profile-photo {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    border : solid #213555 10px;
+    object-fit: cover;
+}
+/* border 알기  */
+
+
+/* right-container */
+.right_container{
+    width: 65%;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    overflow : scroll;
+}
+/* left와 합쳐 100% 되기 위해 65%로  
+flex-wrap: wrap; wrap 알기
+안에서 휜색 바탕안에서  스코롤 일어나게  */
+
+.right_container section {
+    background-color: white;
+    padding: 30px 60px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    width : calc(100% - 120px);
+    height: calc(100% - 60px);
+    display : flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+/* section 에서만 색깔 줌  
+box-shadow: 0 2px 4px; 여기서 각각 세 px 뭔지 알기 
+space around 알기 */
+.skill { 
+    margin-bottom: 10px;
+}
+.skill-bar { 
+    background-color: #e0e0e0;
+    border-radius : 5px;
+    overflow : hidden;
+}
+.skill-level { 
+    background-color: pink;
+    height: 30px;
+    line-height: 30px;
+    color : white;
+    text-align: right;
+    box-sizing: border-box;
+}
